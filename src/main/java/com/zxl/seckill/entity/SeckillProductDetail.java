@@ -2,6 +2,7 @@ package com.zxl.seckill.entity;
 
 import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.annotations.TableName;
+import com.zxl.seckill.util.BaseModel;
 import lombok.Data;
 
 /**
@@ -9,11 +10,7 @@ import lombok.Data;
  */
 @TableName("seckill_product_detail")
 @Data
-public class SeckillProductDetail {
-
-    // ID
-    @TableField("id")
-    private Long id;
+public class SeckillProductDetail extends BaseModel {
 
     // 商品ID
     @TableField("product_id")
@@ -46,12 +43,4 @@ public class SeckillProductDetail {
     // 商品详解图片地址
     @TableField("product_detail_address")
     private String productDetailAddress;
-
-    // 描述
-    @TableField("remark")
-    private String remark;
-
-    // 记录删除标志 [0]-未删除;[1]-逻辑删除
-    @TableField("deleted_flag")
-    private String deletedFlag;
 }

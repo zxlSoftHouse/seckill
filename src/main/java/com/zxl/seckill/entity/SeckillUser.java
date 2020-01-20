@@ -2,6 +2,7 @@ package com.zxl.seckill.entity;
 
 import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.annotations.TableName;
+import com.zxl.seckill.util.BaseModel;
 import lombok.Data;
 
 /**
@@ -9,11 +10,7 @@ import lombok.Data;
  */
 @TableName("seckill_user")
 @Data
-public class SeckillUser {
-
-    // ID
-    @TableField("id")
-    private Long id;
+public class SeckillUser extends BaseModel {
 
     // 用户名
     @TableField("user_name")
@@ -46,12 +43,4 @@ public class SeckillUser {
     // 用户邮箱
     @TableField("user_mail")
     private String userMail;
-
-    // 描述
-    @TableField("remark")
-    private String remark;
-
-    // 记录删除标志 [0]-未删除;[1]-逻辑删除
-    @TableField("deleted_flag")
-    private String deletedFlag;
 }

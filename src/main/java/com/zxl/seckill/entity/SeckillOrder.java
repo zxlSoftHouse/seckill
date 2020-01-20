@@ -2,6 +2,7 @@ package com.zxl.seckill.entity;
 
 import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.annotations.TableName;
+import com.zxl.seckill.util.BaseModel;
 import lombok.Data;
 
 import java.util.Date;
@@ -11,11 +12,7 @@ import java.util.Date;
  */
 @TableName("seckill_order")
 @Data
-public class SeckillOrder {
-
-    // ID
-    @TableField("id")
-    private Long id;
+public class SeckillOrder extends BaseModel {
 
     // 商品ID
     @TableField("product_id")
@@ -60,12 +57,4 @@ public class SeckillOrder {
     // 交易流水号
     @TableField("serial_num")
     private String serialNum;
-
-    // 描述
-    @TableField("remark")
-    private String remark;
-
-    // 记录删除标志 [0]-未删除;[1]-逻辑删除
-    @TableField("deleted_flag")
-    private String deletedFlag;
 }
